@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { AppBar,  Grid, styled, Toolbar, Typography } from '@mui/material';
+import { AppBar, Grid, styled, Toolbar, Typography } from '@mui/material';
 import { useAppSelector } from '../../../app/hooks';
 import UserMenu from './UserMenu';
 import Menu from './Menu';
@@ -12,6 +12,7 @@ const Link = styled(NavLink)({
     color: 'inherit'
   },
 });
+
 const AppToolbar = () => {
   const user = useAppSelector(selectUser);
   return (

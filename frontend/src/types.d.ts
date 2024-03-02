@@ -37,3 +37,42 @@ export interface GlobalError {
   error: string;
 }
 
+export interface Category {
+  _id: string;
+  title: string;
+}
+
+export interface Product {
+  _id: string;
+  title: string;
+  description: string;
+  price: number;
+  image: string | null;
+  category: Category;
+}
+
+export interface ProductMutation {
+  category: string;
+  title: string;
+  description: string;
+  price: string;
+  image: File | null;
+}
+
+export interface ProductsGet {
+  _id: string;
+  user: {
+    _id: string,
+    displayName: string,
+    phoneNumber: string,
+  };
+  title: string;
+  description: string;
+  price: string;
+  image: string | null;
+  category: {
+    _id: string,
+    title: string;
+  };
+}
+export type ApiProductsGet = Omit<ProductsGet, 'id'>;

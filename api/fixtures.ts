@@ -31,39 +31,45 @@ const run = async () => {
 
   await Product.create(
     {
-      title: 'Аренда Ford Mustang Convertible Black',
+      title: 'Ford Mustang Convertible Black',
+      description: 'Аренда Ford Mustang Convertible Black',
       price: 2350000,
-      category: [firstCategory, secondCategory],
+      category: firstCategory, secondCategory,
       image: 'fixtures/car1.jpg',
     },
     {
-      title: 'Ford Mustang Shelby II поколениe',
+      title: 'Ford Mustang Shelby',
+      description: 'Ford Mustang Shelby II поколениe',
       price: 1350000,
-      category: [firstCategory, secondCategory],
+      category: firstCategory, secondCategory,
       image: 'fixtures/car2.jpg',
     },
     {
-      title: 'Мотоциклы Harley-Davidson – тяжелая техника от американского бренда',
+      title: 'Мотоциклы Harley-Davidson',
+      description: 'Мотоциклы Harley-Davidson – тяжелая техника от американского бренда',
       price: 950000,
-      category: [firstCategory, thirdCategory],
+      category: firstCategory, thirdCategory,
       image: 'fixtures/moto2.jpg',
     },
     {
       title: 'Kawasaki Z900RS SE',
+      description: 'Мотоциклы Kawasaki Z900RS SE',
       price: 750000,
-      category: [firstCategory, thirdCategory],
+      category: firstCategory, thirdCategory,
       image: 'fixtures/moto1.jpg',
     },
     {
       title: 'Galeon 640 FLY',
+      description: 'Моторная яхта Galeon 640 FLY',
       price: 1350000,
-      category: [firstCategory, fourthCategory],
+      category: firstCategory, fourthCategory,
       image: 'fixtures/other1.jpg',
     },
     {
-      title: 'Мега-яхты Africa ',
+      title: 'Africa ',
+      description: 'Мега-яхты Africa ',
       price: 750000,
-      category: [firstCategory, fourthCategory],
+      category: firstCategory, fourthCategory,
       image: 'fixtures/other2.jpg',
     },
 
@@ -72,6 +78,8 @@ const run = async () => {
   await User.create({
     username: 'User',
     password: '123',
+    displayName: 'Sun',
+    phoneNumber: '1234567',
     token: crypto.randomUUID(),
   });
 
