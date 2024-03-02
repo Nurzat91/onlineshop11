@@ -6,8 +6,7 @@ const config = {
   rootPath,
   publicPath: path.join(rootPath, 'public'),
   mongoose: {
-    // db: 'mongodb://localhost/onlineshop',
-    db: "mongodb://127.0.0.1:27017/onlineshop",
+    db: 'mongodb://localhost/onlineshop',
   }
 };
 

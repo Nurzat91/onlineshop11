@@ -16,7 +16,7 @@ interface Props {
   image: string | null;
 }
 
-const ProductItem: React.FC<Props> = ({title, price, id, image}) => {
+const ProductItem: React.FC<Props> = ({id,title, price, image}) => {
   let cardImage;
 
   if (image) {

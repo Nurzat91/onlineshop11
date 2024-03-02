@@ -22,6 +22,14 @@ const run = async () => {
     await dropCollection(db, collectionName);
   }
 
+  await User.create({
+    username: 'User',
+    password: '123',
+    displayName: 'Sun',
+    phoneNumber: '1234567',
+    token: crypto.randomUUID(),
+  });
+
   const [firstCategory, secondCategory, thirdCategory, fourthCategory] = await Category.create(
     {title: 'All items',},
     {title: 'Cars',},
@@ -74,14 +82,6 @@ const run = async () => {
     },
 
   );
-
-  await User.create({
-    username: 'User',
-    password: '123',
-    displayName: 'Sun',
-    phoneNumber: '1234567',
-    token: crypto.randomUUID(),
-  });
 
   await db.close();
 };

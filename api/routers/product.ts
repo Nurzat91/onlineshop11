@@ -59,4 +59,27 @@ productsRouter.post('/', imagesUpload.single('image'), async (req, res, next) =>
   }
 });
 
+productsRouter.delete('/:id', async (req, res, next) => {
+  try {
+    let _id: Types.ObjectId;
+    try {
+      _id = new Types.ObjectId(req.params.id);
+    } catch {
+      return res.status(404).send({error: 'Wrong ObjectId!'});
+    }
+
+    const product = await Product.findById(_id);
+    if (!product) {
+      return res.status(404).send({ error: 'Product not found' });
+    }
+
+    await Product.findByIdAndDelete(_id);
+
+    res.status(200).send({ message: 'Product deleted' });
+  } catch (e) {
+
+    next(e);
+  }
+});
+
 export default productsRouter;
