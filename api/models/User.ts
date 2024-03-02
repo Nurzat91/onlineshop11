@@ -26,7 +26,7 @@ const UserSchema = new Schema<UserFields, UserModel, UserMethods>({
       message: 'This user is already registered'
     }
   },
-  displayname: {
+  displayName: {
     type: String,
     required: true,
   },
@@ -38,8 +38,8 @@ const UserSchema = new Schema<UserFields, UserModel, UserMethods>({
     type: String,
     required: true,
   },
-  phonenumber: {
-    type: Number,
+  phoneNumber: {
+    type: String,
     required: true,
   }
 });

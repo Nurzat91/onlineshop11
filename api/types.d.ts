@@ -2,10 +2,10 @@ import {Model} from 'mongoose';
 
 export interface UserFields {
   username: string;
-  displayname: string;
+  displayName: string;
   password: string;
   token: string;
-  phonenumber: number;
+  phoneNumber: string;
 }
 interface UserMethods{
   checkPassword(password: string): Promise<boolean>;
