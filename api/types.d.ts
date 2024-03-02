@@ -13,3 +13,11 @@ interface UserMethods{
 }
 
 type UserModel = Model<UserFields, {}, UserMethods>;
+
+export interface ProductMutation {
+  category: string,
+  title: string,
+  price: number,
+  description: string,
+  image: string | null,
+}
